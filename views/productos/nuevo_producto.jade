@@ -1,0 +1,18 @@
+h1 Nuevo Producto
+
+form(method="POST", action="/productos/nuevo_producto")
+
+  p Codigo:
+    input(type="number" name="codigo")
+
+  p Nombre:
+    input(type="text" name="nombre")
+
+  p Stock:
+    input(type="number" name="stock")
+
+  p Precio:
+    input(type="number" name="precio")
+
+  p
+    button(type="submit") Enviar
