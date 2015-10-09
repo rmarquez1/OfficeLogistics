@@ -1,13 +1,182 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  -var nombre = "Ramón"
-  h2 Hola #{nombre}
-  - soleado = false
-  - if (soleado)
-    p Hace sol. Voy a la piscina
-  - else
-    p Hola
-
+  .body1
+      .body2
+        .main
+          // header
+          header
+            .wrapper
+              h1
+                a#logo(href='index.jade') Office Logistics
+              nav
+                ul#menu
+                  li#nav1.active
+                    a(href='index.html')
+                      | Home
+                      span Welcome!
+                  li#nav2
+                    a(href='News.html')
+                      | News
+                      span Fresh
+                  li#nav3
+                    a(href='Services.html')
+                      | Services
+                      span for you
+                  li#nav4
+                    a(href='Products.html')
+                      | Products
+                      span The best
+                  li#nav5
+                    a(href='Contacts.html')
+                      | Contacts
+                      span Our Address
+            .wrapper
+              .slider
+                ul.items
+                  li
+                    img(src='images/img1.jpg', alt='')
+                  li
+                    img(src='images/img2.jpg', alt='')
+                  li
+                    img(src='images/img3.jpg', alt='')
+                  li
+                    img(src='images/img4.jpg', alt='')
+          .ic More Website Templates  at TemplateMonster.com!
+          // header end
+    .body3
+      .main
+        // content
+        article#content
+          .wrapper
+            section.cols
+              h3
+                span.dropcap A
+                | Business
+                span planning
+              p.pad_bot1
+                | Progress is one of 
+                a(href='http://blog.templatemonster.com/free-website-templates/', target='_blank') free website templates
+                |  created by TemplateMonster.com, optimized for 1024x768 res.
+              a.link1(href='#') Read More
+            section.cols.pad_left1
+              h3
+                span.dropcap B
+                | Business
+                span strategies
+              p.pad_bot1
+                | This 
+                a(href='http://blog.templatemonster.com/2011/07/11/free-website-template-slider-typography/') Progress Template
+                |  goes with two packages – with PSD source files and without them.
+              a.link1(href='#') Read More
+            section.cols.pad_left1
+              h3
+                span.dropcap C
+                | Powerful
+                span analytics
+              p.pad_bot1
+                | PSD source files are available for free for registered members. The basic package is available for anyone.
+              a.link1(href='#') Read More
+            section.cols.pad_left1
+              h3
+                span.dropcap D
+                | Worldwide
+                span solutions
+              p.pad_bot1
+                | This website template has several pages: Home, News, Services, Products, Contacts (contact form doesn’t work).
+              a.link1(href='#') Read More
+          .wrapper
+            section.col1
+              h2.under Welcome, dear visitor!
+              .wrapper
+                figure.left.marg_right1
+                  img(src='images/page1_img1.jpg', alt='')
+                p.pad_bot1
+                  | At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa.
+                p
+                  | Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+            section.col2.pad_left1
+              h2 Testimonials
+              .testimonials
+                #testimonials
+                  ul
+                    li
+                      div
+                        | “Nam libero tempore, cum soluta nobis eligendi quo minus quod maxime placeat facere.”
+                      span
+                        strong.color1 James Coloway,
+                        br
+                        | 								Director
+                    li
+                      div
+                        | “Nam libero tempore, cum soluta nobis eligendi quo minus quod maxime placeat facere.”
+                      span
+                        strong.color1 James Coloway,
+                        br
+                        | 								Director
+                    li
+                      div
+                        | “Nam libero tempore, cum soluta nobis eligendi quo minus quod maxime placeat facere.”
+                      span
+                        strong.color1 James Coloway,
+                        br
+                        | 								Director
+                a.up(href='#')
+                a.down(href='#')
+    .body4
+      .main
+        article#content2
+          .wrapper
+            section.col3
+              h4 Why Us?
+              ul.list1
+                li
+                  a(href='#') Lorem ipsum dolor sit
+                li
+                  a(href='#') Dmet, consectetur
+                li
+                  a(href='#') Adipisicing elit eiusmod 
+                li
+                  a(href='#') Tempor incididunt ut
+            section.col3.pad_left2
+              h4 Address
+              ul.address
+                li
+                  span Country:
+                  | USA
+                li
+                  span City:
+                  | San Diego
+                li
+                  span Phone:
+                  | 8 800 154-45-67
+                li
+                  span Email:
+                  a(href='mailto:') progress@mail.com
+            section.col3.pad_left2
+              h4 Follow Us
+              ul#icons
+                li
+                  a(href='#')
+                    img(src='images/icon1.jpg', alt='')
+                    | Facebook
+                li
+                  a(href='#')
+                    img(src='images/icon2.jpg', alt='')
+                    | Twitter
+                li
+                  a(href='#')
+                    img(src='images/icon3.jpg', alt='')
+                    | LinkedIn
+                li
+                  a(href='#')
+                    img(src='images/icon4.jpg', alt='')
+                    | Delicious
+            section.col2.right
+              h4 Newsletter
+              form#newsletter(method='post')
+                div
+                  .wrapper
+                    input.input(type='text', value='Type Your Email Here', onblur="if(this.value=='') this.value='Type Your Email Here'", onfocus="if(this.value =='Type Your Email Here' ) this.value=''")
+                  a.button(href='#', onclick="document.getElementById('newsletter').submit()") Subscribe
+        // content end
