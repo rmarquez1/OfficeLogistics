@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  -var nombre = "Ramón"
+  h2 Hola #{nombre}
+  - soleado = false
+  - if (soleado)
+    p Hace sol. Voy a la piscina
+  - else
+    p Hola
+

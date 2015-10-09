@@ -1,0 +1,13 @@
+- if(resultado.length)
+    table
+      tr
+        th Codigo
+        th Nombre
+        th Precio
+          each producto in resultado
+            tr
+              td #{producto.codigo}
+              td #{producto.nombre}
+              td #{producto.precio}
+  - else
+    p No tienes ningun producto
