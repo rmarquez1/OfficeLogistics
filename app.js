@@ -11,9 +11,14 @@ var productos = require('./controllers/producto');
 
 var app = express();
 
+var uristring = 
+process.env.MONGOLAB_URI ||
+process.env.MONGOHQ_URL ||
+'mongodb://localhost/officelogistics_db';
+
 // CONEXION A BASE DE DATOS
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/officelogistics_db', function(error){
+mongoose.connect(uristring, function(error){
    if(error){
       throw error; 
    }else{
