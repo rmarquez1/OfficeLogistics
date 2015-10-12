@@ -16,6 +16,7 @@ process.env.MONGOLAB_URI ||
 process.env.MONGOHQ_URL ||
 'mongodb://localhost/officelogistics_db';
 
+
 // CONEXION A BASE DE DATOS
 var mongoose = require('mongoose');
 mongoose.connect(uristring, function(error){
