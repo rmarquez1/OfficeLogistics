@@ -53,5 +53,4 @@ router.post('/nuevo_producto', function(request, response) {
 
 });
 
-
 module.exports = router;
