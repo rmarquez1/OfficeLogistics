@@ -1,49 +1,7 @@
 extends layout
 
+
 block content
-  .body1
-      .body2
-        .main
-          // header
-          header
-            .wrapper
-              h1
-                a#logo(href='index.jade') Office Logistics
-              nav
-                ul#menu
-                  li#nav1.active
-                    a(href='index.html')
-                      | Home
-                      span Welcome!
-                  li#nav2
-                    a(href='News.html')
-                      | News
-                      span Fresh
-                  li#nav3
-                    a(href='Services.html')
-                      | Services
-                      span for you
-                  li#nav4
-                    a(href='Products.html')
-                      | Products
-                      span The best
-                  li#nav5
-                    a(href='Contacts.html')
-                      | Contacts
-                      span Our Address
-            .wrapper
-              .slider
-                ul.items
-                  li
-                    img(src='images/img1.jpg', alt='')
-                  li
-                    img(src='images/img2.jpg', alt='')
-                  li
-                    img(src='images/img3.jpg', alt='')
-                  li
-                    img(src='images/img4.jpg', alt='')
-          .ic More Website Templates  at TemplateMonster.com!
-          // header end
     .body3
       .main
         // content
@@ -106,77 +64,20 @@ block content
                       span
                         strong.color1 James Coloway,
                         br
-                        | 								Director
+                        |                               Director
                     li
                       div
                         | “Nam libero tempore, cum soluta nobis eligendi quo minus quod maxime placeat facere.”
                       span
                         strong.color1 James Coloway,
                         br
-                        | 								Director
+                        |                               Director
                     li
                       div
                         | “Nam libero tempore, cum soluta nobis eligendi quo minus quod maxime placeat facere.”
                       span
                         strong.color1 James Coloway,
                         br
-                        | 								Director
+                        |                               Director
                 a.up(href='#')
                 a.down(href='#')
-    .body4
-      .main
-        article#content2
-          .wrapper
-            section.col3
-              h4 Why Us?
-              ul.list1
-                li
-                  a(href='#') Lorem ipsum dolor sit
-                li
-                  a(href='#') Dmet, consectetur
-                li
-                  a(href='#') Adipisicing elit eiusmod 
-                li
-                  a(href='#') Tempor incididunt ut
-            section.col3.pad_left2
-              h4 Address
-              ul.address
-                li
-                  span Country:
-                  | USA
-                li
-                  span City:
-                  | San Diego
-                li
-                  span Phone:
-                  | 8 800 154-45-67
-                li
-                  span Email:
-                  a(href='mailto:') progress@mail.com
-            section.col3.pad_left2
-              h4 Follow Us
-              ul#icons
-                li
-                  a(href='#')
-                    img(src='images/icon1.jpg', alt='')
-                    | Facebook
-                li
-                  a(href='#')
-                    img(src='images/icon2.jpg', alt='')
-                    | Twitter
-                li
-                  a(href='#')
-                    img(src='images/icon3.jpg', alt='')
-                    | LinkedIn
-                li
-                  a(href='#')
-                    img(src='images/icon4.jpg', alt='')
-                    | Delicious
-            section.col2.right
-              h4 Newsletter
-              form#newsletter(method='post')
-                div
-                  .wrapper
-                    input.input(type='text', value='Type Your Email Here', onblur="if(this.value=='') this.value='Type Your Email Here'", onfocus="if(this.value =='Type Your Email Here' ) this.value=''")
-                  a.button(href='#', onclick="document.getElementById('newsletter').submit()") Subscribe
-        // content end

@@ -1,0 +1,57 @@
+.body4
+      .main
+        article#content2
+          .wrapper
+            section.col3
+              h4 Why Us?
+              ul.list1
+                li
+                  a(href='#') Lorem ipsum dolor sit
+                li
+                  a(href='#') Dmet, consectetur
+                li
+                  a(href='#') Adipisicing elit eiusmod 
+                li
+                  a(href='#') Tempor incididunt ut
+            section.col3.pad_left2
+              h4 Address
+              ul.address
+                li
+                  span Country:
+                  | USA
+                li
+                  span City:
+                  | San Diego
+                li
+                  span Phone:
+                  | 8 800 154-45-67
+                li
+                  span Email:
+                  a(href='mailto:') progress@mail.com
+            section.col3.pad_left2
+              h4 Follow Us
+              ul#icons
+                li
+                  a(href='#')
+                    img(src='images/icon1.jpg', alt='')
+                    | Facebook
+                li
+                  a(href='#')
+                    img(src='images/icon2.jpg', alt='')
+                    | Twitter
+                li
+                  a(href='#')
+                    img(src='images/icon3.jpg', alt='')
+                    | LinkedIn
+                li
+                  a(href='#')
+                    img(src='images/icon4.jpg', alt='')
+                    | Delicious
+            section.col2.right
+              h4 Newsletter
+              form#newsletter(method='post')
+                div
+                  .wrapper
+                    input.input(type='text', value='Type Your Email Here', onblur="if(this.value=='') this.value='Type Your Email Here'", onfocus="if(this.value =='Type Your Email Here' ) this.value=''")
+                  a.button(href='#', onclick="document.getElementById('newsletter').submit()") Subscribe
+        // content end

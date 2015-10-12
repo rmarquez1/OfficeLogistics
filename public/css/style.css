@@ -15,7 +15,7 @@ body{background:#000;border:0;font:14px "Trebuchet MS", Arial, Helvetica, sans-s
 .body4{background:url(../images/bg.jpg) top center repeat}
 .body5{background:url(../images/bg_top_img.jpg) center bottom no-repeat}
 /* Global Structure ============================================================= */
-.main {margin:0 auto;width:940px}
+.main {margin:0 auto;width:1100px}
 /* ============================= main layout ====================== */
 a{color:#696969;text-decoration:underline;outline:none}
 a:hover{text-decoration:none}
@@ -35,8 +35,8 @@ h6{font-size:20px;line-height:1.2em;color:#000;padding:0 0 5px 0;font-style:norm
 p{padding-bottom:22px}
 /* ============================= header ====================== */
 header{padding-top:34px;height:148px}
-#logo{display:block;background:url(../images/logo.png) 0 0 no-repeat;width:288px;height:94px;text-indent:-9999px}
-#menu {float:right;padding-top:15px}
+#logo{display:block;background:url(../images/logo.png) 0 0 no-repeat;width:450px;height:50px;text-indent:-9999px}
+#menu {float:right;padding-top:10px}
 #menu li {float:left;padding-left:51px}
 #menu li a{display:block;font:20px "Trebuchet MS", Arial, Helvetica, sans-serif;line-height:1.2em;color:#bbb;text-transform:uppercase;text-decoration:none;text-align:center;letter-spacing:-1px;height:79px;font-style:normal;font-weight:700}
 #menu li a span{font-size:13px;line-height:1.2em;color:#666666;display:block;letter-spacing:-1px;margin-top:-3px;font-weight:normal}
@@ -52,7 +52,7 @@ header{padding-top:34px;height:148px}
 #menu #nav4 a:hover, #menu #nav4.active a{background:url(../images/menu_icon4_active.gif) bottom center no-repeat}
 #menu #nav5 a{background:url(../images/menu_icon5.gif) bottom center no-repeat}
 #menu #nav5 a:hover, #menu #nav5.active a{background:url(../images/menu_icon5_active.gif) bottom center no-repeat}
-.slider{top:162px;position:absolute;z-index:1}
+.slider{top:200px;position:absolute;z-index:1}
 .slider .items{display:none}
 .slider  .pagination{position:absolute;z-index:2;bottom:47px;left:432px}
 .slider  .pagination li{float:left;padding-right:4px}
@@ -120,3 +120,4 @@ footer a:hover{}
 #newsletter .wrapper{min-height:40px}
 #newsletter a{float:right;width:90px;height:32px;background:#fff;line-height:32px;color:#000;font-weight:bold;text-align:center;font-style:normal;text-decoration:none}
 #newsletter a:hover{background:#60b000;color:#fff}
+

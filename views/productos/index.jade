@@ -1,18 +1,20 @@
 extends ../layout
 
 block content
-  - if(resultado.length)
-    table
-      tr
-        th Codigo
-        th Nombre
-        th Precio
-        th ID
-          each producto in resultado
-            tr
-              td #{producto.codigo}
-              td #{producto.nombre}
-              td #{producto.precio}
-              td #{producto._id}
-  - else
-    p No tienes ningun producto
+  .body3
+    .main
+      - if(resultado.length)
+        table
+          tr
+            th Codigo
+            th Nombre
+            th Precio
+            th ID
+              each producto in resultado
+                tr
+                  td #{producto.codigo}
+                  td #{producto.nombre}
+                  td #{producto.precio}
+                  td #{producto._id}
+      - else
+        p No tienes ningun producto
