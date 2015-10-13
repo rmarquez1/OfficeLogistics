@@ -19,12 +19,12 @@ table, tbody, tfoot, thead, th, tr, tdvideo, tt,
 u, ul, 
 var{
     background: transparent;
-    border: 0 none;
+    border: 1;
     font-size: 100%;
     margin: 0;
-		padding: 0;
-		border: 0;
-		outline: 0;
+	padding: 0;
+	border: 1;
+	outline: 0;
     vertical-align: top; }
 
 ol, ul {
@@ -33,15 +33,15 @@ ol, ul {
 blockquote, q {
 	quotes: none;
 }
-table, table td { 
+table, table td, table tr { 
 	padding:0;
-	border:none;
+	border: 0;
 	border-collapse:collapse;
 }
+
 img {
 	vertical-align:top; 
 }
 embed { 
 	vertical-align:top;
 }
-* { border:none}

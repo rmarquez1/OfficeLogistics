@@ -1,0 +1,77 @@
+extends ../layout
+
+block content
+	.body3
+		.main
+			form(method="POST", action="/nuevo_usuario")
+				.tabla
+					table.agregar
+						tr
+							td#rows Datos Personales
+						tr
+							td Nombre:
+							td 
+								input(type="text" name="nombre")
+						tr
+							td Apellidos:
+							td
+								input(type="text" name="apellidos")
+						tr
+							td Email:
+							td 
+								input(type="text" name="email")
+						tr
+							td#rows Empresa
+						tr
+							td Empresa:
+							td
+								input(type="text" name="empresa")
+						tr
+							td#rows Dirección
+						tr
+							td RIF:
+							td 
+								input(type="text" name="rif")
+						tr
+							td Dirección:
+							td 
+								input(type="text" name="direccion")
+						tr
+							td Código Postal:
+							td 
+								input(type="text" name="codigo_postal")
+						tr
+							td Población:
+							td 
+								input(type="text" name="poblacion")
+						tr
+							td Provincia/Estado:
+							td 
+								input(type="text" name="provincia_estado")
+						tr
+							td País:
+							td 
+								input(type="text" name="pais")
+						tr
+							td#rows Datos de Contacto
+						tr
+							td Teléfono:
+							td 
+								input(type="text" name="telefono")
+						tr
+							td Fax:
+							td 
+								input(type="text" name="fax")
+						tr
+							td#rows Contraseña
+						tr
+							td Contraseña:
+							td 
+								input(type="password" name="password")
+						tr
+							td Repetir contraseña:
+							td 
+								input(type="password" name="password1")
+						tr
+							td
+								button.btnAgregar(type='submit', value='submit') Crear

@@ -35,7 +35,7 @@ h6{font-size:20px;line-height:1.2em;color:#000;padding:0 0 5px 0;font-style:norm
 p{padding-bottom:22px}
 /* ============================= header ====================== */
 header{padding-top:34px;height:148px}
-#logo{display:block;background:url(../images/logo.png) 0 0 no-repeat;width:450px;height:50px;text-indent:-9999px}
+#logo{display:block;background:url(/images/logo.png) 0 0 no-repeat;width:450px;height:50px;text-indent:-9999px}
 #menu {float:right;padding-top:10px}
 #menu li {float:left;padding-left:51px}
 #menu li a{display:block;font:20px "Trebuchet MS", Arial, Helvetica, sans-serif;line-height:1.2em;color:#bbb;text-transform:uppercase;text-decoration:none;text-align:center;letter-spacing:-1px;height:79px;font-style:normal;font-weight:700}
@@ -121,3 +121,41 @@ footer a:hover{}
 #newsletter a{float:right;width:90px;height:32px;background:#fff;line-height:32px;color:#000;font-weight:bold;text-align:center;font-style:normal;text-decoration:none}
 #newsletter a:hover{background:#60b000;color:#fff}
 
+/**********************************************************/
+/* Tabla de creación de cuentas a los usuarios */
+/* Esto es para tablas separaras */
+table.declare{
+	border: gray 1px solid;
+	border-collapse:separate;
+	text-align: center;
+}
+
+/* Esto es para bordear ciertos campos en las tablas */
+tr.top td { border-top: thin solid black; }
+tr.bottom td { border-bottom: thin solid black; }
+tr.row td:first-child { border-left: thin solid black; }
+tr.row td:last-child { border-right: thin solid black; }
+
+td#rows {font-family: sans-serif; font-style: normal; font-size: 20px }
+
+table.agregar {border-spacing: 50px 10px; border-collapse: separate;}
+
+.tabla {text-align: center;}
+
+.tabla table {
+margin: 0 auto;
+text-align: left;
+}
+
+/*.btnAgregar {
+  color: #900;
+  font-weight: bold;
+  border: 1px solid #20B2AA;
+  background-color: #C0C0C0;
+  background-size: 10px;
+}
+ 
+.btnAgregar:hover {
+  color: #FFF;
+  background: #32CD32;
+}*/

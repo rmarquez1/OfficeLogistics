@@ -1,18 +1,25 @@
-h1 Nuevo Producto
+extends ../layout
 
-form(method="POST", action="/productos/nuevo_producto")
+block content
 
-  p Codigo:
-    input(type="number" name="codigo")
+  .body3
+    .main
+      h1 Nuevo Producto
+      br
 
-  p Nombre:
-    input(type="text" name="nombre")
+      form(method="POST", action="/productos/nuevo_producto")
 
-  p Stock:
-    input(type="number" name="stock")
+        p Codigo:
+          input(type="number" name="codigo")
 
-  p Precio:
-    input(type="number" name="precio")
+        p Nombre:
+          input(type="text" name="nombre")
 
-  p
-    button(type="submit") Enviar
+        p Stock:
+          input(type="number" name="stock")
+
+        p Precio:
+          input(type="number" name="precio")
+
+        p
+          button(type="submit") Enviar
