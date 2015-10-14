@@ -9,10 +9,11 @@ mark, rp, rt, ruby, summary, time{display:inline }
 body{background:#000;border:0;font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;color:#696969;line-height:22px;font-style:italic}
 .ic, .ic a {border:0;float:right;background:#fff;color:#f00;width:50%;line-height:10px;font-size:10px;margin:-220% 0 0 0;overflow:hidden;padding:0}
 .css3{border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px;box-shadow:0 0 4px rgba(0, 0, 0, .4);-moz-box-shadow:0 0 4px rgba(0, 0, 0, .4);-webkit-box-shadow:0 0 4px rgba(0, 0, 0, .4);position:relative}
-.body1{background:url(../images/bg.jpg) bottom center repeat}
-.body2{background:url(../images/bg_top2.gif) bottom repeat-x}
-.body3{background:#fff}
-.body4{background:url(../images/bg.jpg) top center repeat}
+.body1{background:#fff bottom center repeat}
+.body2{background:url(../images/linea_roja.gif) bottom repeat-x}
+.body3{background:#eee}
+/*.body4{background:url(../images/bg.jpg) top center repeat}*/
+.body4{background:#aaa top center repeat}
 .body5{background:url(../images/bg_top_img.jpg) center bottom no-repeat}
 /* Global Structure ============================================================= */
 .main {margin:0 auto;width:1100px}
@@ -35,14 +36,14 @@ h6{font-size:20px;line-height:1.2em;color:#000;padding:0 0 5px 0;font-style:norm
 p{padding-bottom:22px}
 /* ============================= header ====================== */
 header{padding-top:34px;height:148px}
-#logo{display:block;background:url(/images/logo.png) 0 0 no-repeat;width:450px;height:50px;text-indent:-9999px}
+#logo{display:block;background:url(/images/logoconfondo.png) 0 0 no-repeat;width:450px;height:50px;text-indent:-9999px}
 #menu {float:right;padding-top:10px}
 #menu li {float:left;padding-left:51px}
-#menu li a{display:block;font:20px "Trebuchet MS", Arial, Helvetica, sans-serif;line-height:1.2em;color:#bbb;text-transform:uppercase;text-decoration:none;text-align:center;letter-spacing:-1px;height:79px;font-style:normal;font-weight:700}
-#menu li a span{font-size:13px;line-height:1.2em;color:#666666;display:block;letter-spacing:-1px;margin-top:-3px;font-weight:normal}
-#menu li a:hover, #menu .active a{color:#497e04}
-#menu li a:hover span, #menu .active a span{color:#fff}
-#menu #nav1 a{background:url(../images/menu_icon1.gif) bottom center no-repeat}
+#menu li a{display:block;font:20px "Trebuchet MS", Arial, Helvetica, sans-serif;line-height:1.2em;color:#333399;text-transform:uppercase;text-decoration:none;text-align:center;letter-spacing:-1px;height:79px;font-style:normal;font-weight:700}
+#menu li a span{font-size:13px;line-height:1.2em;color:#000;display:block;letter-spacing:-1px;margin-top:-3px;font-weight:normal}
+#menu li a:hover, #menu .active a{color:#333399}
+#menu li a:hover span, #menu .active a span{color:#000}
+|#menu #nav1 a{background:url(../images/menu_icon1.gif) bottom center no-repeat}
 #menu #nav1 a:hover, #menu #nav1.active a{background:url(../images/menu_icon1_active.gif) bottom center no-repeat}
 #menu #nav2 a{background:url(../images/menu_icon2.gif) bottom center no-repeat}
 #menu #nav2 a:hover, #menu #nav2.active a{background:url(../images/menu_icon2_active.gif) bottom center no-repeat}
