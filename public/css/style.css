@@ -21,8 +21,8 @@ body{background:#000;border:0;font:14px "Trebuchet MS", Arial, Helvetica, sans-s
 a{color:#696969;text-decoration:underline;outline:none}
 a:hover{text-decoration:none}
 h1{float:left}
-h2{font-size:40px;font-style:normal;font-weight:400;line-height:1.2em;padding:38px 0 11px 0;color:#000;letter-spacing:-1px}
-h2.under{border-bottom:1px solid #e5e5e5;margin-bottom:25px}
+/*h2{font-size:40px;font-style:normal;font-weight:400;line-height:1.2em;padding:38px 0 11px 0;color:#000;letter-spacing:-1px}*/
+/*h2.under{border-bottom:1px solid #e5e5e5;margin-bottom:25px}*/
 h3{font-size:26px;color:#000;line-height:1.2em;letter-spacing:-0px;padding-bottom:16px;font-weight:400;font-style:normal}
 h3 span{display:block;margin-top:-7px}
 * + html h3 span{margin-top:-25px}
@@ -125,6 +125,9 @@ footer a:hover{}
 /**********************************************************/
 /* Tabla de creación de cuentas a los usuarios */
 /* Esto es para tablas separaras */
+h2 {
+    font-size: 20px;
+}
 table.declare{
 	border: gray 1px solid;
 	border-collapse:separate;
@@ -148,6 +151,116 @@ margin: 0 auto;
 text-align: left;
 }
 
+.list-view-item {
+    border-bottom: 1px solid #cdcdcd;
+    min-height: 20px;
+    height: auto!important;
+    height: 80px;
+    padding: 15px 385px 5px 120px;
+    position: relative;
+}
+
+.list-view-item-title {
+    font-size: 17px;
+    font-weight: normal;
+    margin: 0px 0px 5px;
+    position: relative;
+    z-index: 1000;
+}
+
+.ch-price {
+    color: #900;
+    font-size: 16px;
+    font-weight: bold;
+}
+.list-view {
+    min-height: 370px;
+    padding-bottom: 60px;
+    padding-top: 4px;
+    margin-bottom: -20px;
+    overflow: visible;
+}
+
+.section {
+    overflow: hidden;
+}
+
+.section .list-view-item-title {
+    font-size: 16px;
+    line-height: 22px;
+    z-index: 20;
+}
+
+.section .list-view {
+    padding-left: 10px;
+}
+
+.price-info-cost, .price-info-cost .ch-price {
+    margin-right: 0;
+}
+
+.rowItem{
+  height:100px;
+  padding-top:30px;
+}
+
+.row-viewer {
+    display: block;
+    height: 90px;
+    left: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 5px;
+    width: 90px;
+}
+.price-info {
+    position: absolute;
+    right: 170px;
+    top: 15px;
+    text-align: right;
+}
+
+.list-view .article {
+    height: 338px;
+    float: left;
+    margin: 0 1% 0;
+    position: relative;
+    padding-top: 2px;
+}
+
+.list-view .article .rowItem {
+    position: relative;
+}
+.list-view .article .rowItem {
+    padding: 100px 8% 10px;
+}
+
+.list-view .article .list-view-item-title {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 0 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+
+.list-view .article .costs {
+    display: inline-block;
+}
+
+.list-view .ch-price {
+    display: inline-block;
+}
+.ch-price {
+    color: #900;
+    font-size: 16px;
+    font-weight: bold;
+}
+.ch-price sup {
+    font-size: 10px;
+    vertical-align: text-top;
+    line-height: 1em;
+}
 /*.btnAgregar {
   color: #900;
   font-weight: bold;

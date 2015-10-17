@@ -8,7 +8,12 @@ var mongoose = require ('mongoose');
     codigo : Number,
     nombre : String, 
     stock : Number, 
-    precio : Number
+    precio : Number,
+    imagen :{
+    	formato : String,
+    	src : String,
+    	path : String
+    }
 
   });
 
