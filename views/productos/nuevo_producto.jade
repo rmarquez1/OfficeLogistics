@@ -4,25 +4,32 @@ block content
 
   .body3
     .main
-      h1 Nuevo Producto
-      br
 
       form(method="POST", action="/productos/nuevo_producto", enctype="multipart/form-data")
-
-        p Codigo:
-          input(type="number" name="codigo")
-
-        p Nombre:
-          input(type="text" name="nombre")
-
-        p Stock:
-          input(type="number" name="stock")
-
-        p Precio:
-          input(type="number" name="precio")
-
-        p Imagen:
-          input(type="file" name="imagen")
-
-        p
-          button(type="submit") Enviar
+        .tabla
+          table.agregar
+            tr
+              td#rows Nuevo Producto
+            tr
+              td Código
+              td 
+                input(type="number" name="codigo" required)
+            tr
+              td Nombre
+              td 
+                input(type="text" name="nombre" required)
+            tr
+              td Stock
+              td 
+                input(type="number" name="stock" required)
+            tr
+              td Precio
+              td 
+                input(type="number" name="precio" required)
+            tr
+              td Imagen
+              td 
+                input(type="file" name="imagen" required)
+          div(align="center") 
+              button.button(type="submit") Enviar
+              button.button(type="reset") Reset

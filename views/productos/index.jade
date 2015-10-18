@@ -3,20 +3,26 @@ extends ../layout
 block content
 		.body3
 				.main
+					div
+						a(href="/productos/nuevo_producto")
+							button.button(type="button") Agregar producto
+
+						button.button(type="button") Eliminar producto
 						- if (resultado.length)
 								div.section
 									ol.section.list-view
 										each producto in resultado
 											li.article
 												div.rowItem
-													h2.list-view-item-title #{producto.nombre}
+													a(href="/")
+														h2.list-view-item-title #{producto.nombre}
 													br
-													img.row-viewer(src='uploads/#{producto.imagen.src}', width='250', height='250')
+													img.row-viewer(src='uploads/#{producto.imagen.src}')
 													ul.details
 														li.cost
-															div.price-wrap
-																span.ch-price Bs. #{producto.precio}
-																	sup 00
+															span.ch-price Bs. #{producto.precio}
+																sup 00
+														button.buttonCesta(type="button") Agregar producto
 
 						- else
 								p No tiene producto

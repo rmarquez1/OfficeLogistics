@@ -179,6 +179,7 @@ text-align: left;
     padding-top: 4px;
     margin-bottom: -20px;
     overflow: visible;
+    background: url(../images/content_wrapper_br.gif) 100% 100% no-repeat;
 }
 
 .section {
@@ -206,12 +207,12 @@ text-align: left;
 
 .row-viewer {
     display: block;
-    height: 90px;
+    height: 210px;
     left: 10px;
     overflow: hidden;
     position: absolute;
     top: 5px;
-    width: 90px;
+    width: 210px;
 }
 .price-info {
     position: absolute;
@@ -232,7 +233,7 @@ text-align: left;
     position: relative;
 }
 .list-view .article .rowItem {
-    padding: 100px 8% 10px;
+    padding: 220px 8px 10px;
 }
 
 .list-view .article .list-view-item-title {
@@ -260,6 +261,55 @@ text-align: left;
     font-size: 10px;
     vertical-align: text-top;
     line-height: 1em;
+}
+
+
+/*********************************************/
+/* BOTONES */
+.button {
+  background-color:#458fc7;
+  -moz-border-radius:28px;
+  -webkit-border-radius:28px;
+  border-radius:28px;
+  border:1px solid #fafafa;
+  display:inline-block;
+  cursor:pointer;
+  color:#f7f2f7;
+  font-family:Arial;
+  font-size:15px;
+  padding:16px 31px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #43693d;
+}
+.button:hover {
+  background-color:#8d919e;
+}
+.button:active {
+  position:relative;
+  top:1px;
+}
+
+.buttonCesta {
+  background-color:#458fc7;
+  -moz-border-radius:28px;
+  -webkit-border-radius:28px;
+  border-radius:28px;
+  border:1px solid #fafafa;
+  display:inline-block;
+  cursor:pointer;
+  color:#f7f2f7;
+  font-family:Arial;
+  font-size:15px;
+  padding:16px 31px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #43693d;
+}
+.buttonCesta:hover {
+  background-color:#8d919e;
+}
+.buttonCest:active {
+  position:relative;
+  top:10px;
 }
 
 
