@@ -5,12 +5,12 @@ var fs = require('fs');
 var path =require('path');
 var multer  = require('multer');
 
-var base64 = require('base-64');
+//var base64 = require('base-64');
 
 //var base64 = require('node-base64-image');
 
 // function to encode file data to base64 encoded string
-function base64_encode(file) {
+/*function base64_encode(file) {
     // read binary data
     var bitmap = fs.readFileSync(file);
     // convert binary data to base64 encoded string
@@ -24,7 +24,7 @@ function base64_decode(base64str, file) {
     // write buffer to file
     fs.writeFileSync(file, bitmap);
     console.log('******** File created from base64 encoded string ********');
-}
+}/
 
 
 
@@ -58,8 +58,8 @@ router.post('/nuevo_producto', function(request, response) {
   console.log(request.files.imagen.path);
   /*var imagen_src = new Buffer(u.imagen).toString('base64');
   var iamgen_normal = imagen_src.toString('ascii');*/
-  var imagen_src = base64.encode(u.imagen);
-  var imagen_normal = base64.decode(imagen_src);
+  //var imagen_src = base64.encode(u.imagen);
+ // var imagen_normal = base64.decode(imagen_src);
   /*console.log(imagen_src);
   console.log(iamgen_normal);*/
 
