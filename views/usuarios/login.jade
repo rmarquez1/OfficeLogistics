@@ -1,0 +1,40 @@
+extends ../layout
+
+block content
+	.body3
+		.main
+			form(method="POST", action="/login")
+				.tabla
+					table.agregar
+						tr
+							td
+								.tabla
+									table.agregar
+										tr
+											td#rows ¡Soy nuevo!
+										tr
+											td
+												| Al crear una cuenta podrás realizar tus compras, 
+												| consultar el estado de sus pedidos y consultar operaciones
+												| anteriores.
+									div(align="right") 
+										p
+											a(href="/login/nuevo_usuario") ¡Registrarme!
+							td
+								.tabla
+									table.agregar
+										tr
+											td#rows Login
+										tr
+											td Email
+											td 
+												input(type="text" name="email" required)
+										tr
+											td Password
+											td 
+												input(type="password" name="password" required)
+									p
+										a(href="/")
+											| ¿He olvidado mi contraseña?
+									div(align="center") 
+										button.button(type="submit") Login

@@ -1,45 +1,53 @@
-module.exports = function(mongoose) {
+var bcrypt   = require('bcrypt-nodejs');
+var mongoose = require('mongoose');
+var passportLocalMongoose = require('passport-local-mongoose');
 
-  var Schema = mongoose.Schema;
 
-  // Objeto modelo de Mongoose
-  var UsuarioSchema = new Schema({
+var Schema = mongoose.Schema;
 
-    // Informacion personal
-    nombre : String,
-    apellidos : String,
-    email : String, // Averiguar esto
-    
-    // Informacion de la Empresa
-    empresa : String,
+// Objeto modelo de Mongoose
+var UsuarioSchema = new Schema({
 
-    // Dirreccion
-    rif : String,
-    direccion : String,
-    codigo_postal : String,
-    poblacion : String,
-    provincia_estado : String,
-    pais : String,  // Averiguar como colocar todos los paises
+  // Informacion personal
+  nombre : String,
+  apellidos : String,
+  email : String, // Averiguar esto
+  
+  // Informacion de la Empresa
+  empresa : String,
 
-    // Contacto
+  // Dirreccion
+  rif : String,
+  direccion : String,
+  codigo_postal : String,
+  poblacion : String,
+  provincia_estado : String,
+  pais : String,  // Averiguar como colocar todos los paises
 
-    telefono : String,
-    fax : String,
+  // Contacto
 
-    // Contraseña
-    password : String,
+  telefono : String,
+  fax : String,
 
-    // Booleano para permisologia de administrador
-    esAdministrador : Boolean // tipo de dato buleano
+  // Contraseña
+  password : String,
 
-  });
+  // Booleano para permisologia de administrador
+  esAdministrador : Boolean // tipo de dato buleano
 
-  // metodo para calcular la edad a partir de la fecha de nacimiento
-  UserSchema.methods.age = function() {
+});
 
-    return ~~((Date.now() - this.birthdate) / (31557600000));
+// methods ======================
+// Generando un hash
+UsuarioSchema.methods.generarHash = function(password) {
+    return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+};
 
-  }
+// checking if password is valid
+UsuarioSchema.methods.validarPassword = function(password) {
+    return bcrypt.compareSync(password, this.password);
+};
 
-  return mongoose.model('Usuario', UsuarioSchema);
-}
+UsuarioSchema.plugin(passportLocalMongoose);
+
+module.exports = mongoose.model('Usuario', UsuarioSchema);

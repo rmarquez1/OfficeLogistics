@@ -6,10 +6,17 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var multer = require('multer');
 
+var logger = require('morgan');
+var flash    = require('connect-flash');
+var session      = require('express-session');
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+
 var routes = require('./routes/index');
-var users = require('./routes/users');
+//var usuarios = require('./routes/usuarios');
+var login = require('./controllers/login');
 var productos = require('./controllers/producto');
-var usuarios = require('./controllers/usuario');
+var nuevo_usuario = require('./controllers/nuevo_usuario');
 
 var app = express();
 
@@ -39,12 +46,32 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(multer({ dest: path.join(__dirname, 'public/uploads')}))
 app.use(cookieParser());
+
+app.use(require('express-session')({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(express.static(path.join(__dirname, 'public')));
 
+// passport config
+var Usuario = require('./models/usuario');
+passport.use(new LocalStrategy(Usuario.authenticate()));
+passport.serializeUser(Usuario.serializeUser());
+passport.deserializeUser(Usuario.deserializeUser());
+
+
 app.use('/', routes);
-app.use('/users', users);
+app.use('/login', login);
 app.use('/productos', productos);
-app.use('/nuevo_usuario', usuarios);
+//app.use('/nuevo_usuario', nuevo_usuario);
+
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
