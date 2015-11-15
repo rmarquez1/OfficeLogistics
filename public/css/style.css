@@ -43,7 +43,7 @@ header{padding-top:34px;height:148px}
 #menu li a span{font-size:13px;line-height:1.2em;color:#000;display:block;letter-spacing:-1px;margin-top:-3px;font-weight:normal}
 #menu li a:hover, #menu .active a{color:#333399}
 #menu li a:hover span, #menu .active a span{color:#000}
-|#menu #nav1 a{background:url(../images/menu_icon1.gif) bottom center no-repeat}
+#menu #nav1 a{background:url(../images/menu_icon1.gif) bottom center no-repeat}
 #menu #nav1 a:hover, #menu #nav1.active a{background:url(../images/menu_icon1_active.gif) bottom center no-repeat}
 #menu #nav2 a{background:url(../images/menu_icon2.gif) bottom center no-repeat}
 #menu #nav2 a:hover, #menu #nav2.active a{background:url(../images/menu_icon2_active.gif) bottom center no-repeat}

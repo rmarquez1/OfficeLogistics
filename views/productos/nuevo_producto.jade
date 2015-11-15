@@ -5,29 +5,29 @@ block content
   .body3
     .main
 
-      form(method="POST", action="/productos/nuevo_producto", enctype="multipart/form-data")
+      form(method="POST", action="/admin_productos/nuevo_producto", enctype="multipart/form-data")
         .tabla
           table.agregar
             tr
               td#rows Nuevo Producto
             tr
-              td Código
+              td Código:
               td 
                 input(type="number" name="codigo" required)
             tr
-              td Nombre
+              td Nombre:
               td 
                 input(type="text" name="nombre" required)
             tr
-              td Stock
+              td Stock:
               td 
                 input(type="number" name="stock" required)
             tr
-              td Precio
+              td Precio:
               td 
                 input(type="number" name="precio" required)
             tr
-              td Imagen
+              td Imagen:
               td 
                 input(type="file" name="imagen" required)
           div(align="center") 

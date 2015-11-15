@@ -48,6 +48,10 @@ UsuarioSchema.methods.validarPassword = function(password) {
     return bcrypt.compareSync(password, this.password);
 };
 
+UsuarioSchema.methods.buscarUsuario = function(email, esAdministrador){
+  return UsuarioSchema.find({"email": email, "esAdministrador": esAdministrador}).length();
+};
+
 UsuarioSchema.plugin(passportLocalMongoose);
 
 module.exports = mongoose.model('Usuario', UsuarioSchema);

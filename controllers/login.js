@@ -4,9 +4,48 @@ var Usuario = require('../models/usuario.js');
 var flash    = require('connect-flash');
 var passport = require('passport');
 
+/*var session      = require('express-session');
+router.use(session({
+    secret: 'ssshhhhh',
+    proxy: true,
+    resave: true,
+    saveUninitialized: true
+}));*/
+
 router.get('/', function(req, res) {
 	// render the page and pass in any flash data if it exists
 	res.render('usuarios/login', { }); 
+});
+
+
+/*router.post('/login',function(req,res){
+    sess = req.session;
+    //In this we are assigning email to sess.email variable.
+    //email comes from HTML page.
+    sess.email=req.body.email;
+    console.log("sesion: " + sess.email);
+
+    //console.log("holaaa" + Usuario.buscarUsuario(sess.email, true));
+    Usuario.find({"email":req.body.email ,"esAdministrador":true}, function(err, result){
+        console.log("Resultado: ", result.length);
+        if (result.length == 1){
+            res.redirect('/admin');
+        }else{
+            res.redirect('/');
+        }
+    });
+});*/
+
+router.post('/login',function(req,res){
+    req.session.name = req.body.email;
+    Usuario.find({"email":req.body.email, "password":req.body.password, "esAdministrador":true}, function(err, result){
+        console.log("Resultado: ", result.length);
+        if (result.length == 1){
+            res.redirect('/admin');
+        }else{
+            res.redirect('/');
+        }
+    });
 });
 
 
@@ -48,19 +87,28 @@ router.post('/nuevo_usuario', function(req, res) {
 	});
 	console.log("Hola2");
 
-     Usuario.register(new Usuario({ email : req.body.email }), req.body.password, function(err, usuario) {
+    nuevoUsuario.save(function(err, usuario) {
+
+    if (err) res.json(err);
+
+        res.redirect('/login');
+
+    });
+
+    /* nuevoUsuario.save(function(err, usuario) {
     	console.log("Hola3");
         if (err) {
         	console.log("Hola4");
             return res.render('usuarios/nuevo_usuario', { info: "Sorry. That username already exists. Try again."});
         }
         console.log("Hola");
-        passport.authenticate('local')(req, res, function () {
-        	console.log("Hola adentro");
-            res.redirect('/');
-        });
+        
         console.log("Hola5");
     });
+     passport.authenticate('local')(req, res, function () {
+        	console.log("Hola adentro");
+            res.redirect('/login');
+        });*/
 });
 
 /*

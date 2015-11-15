@@ -47,7 +47,7 @@ router.post('/', function(request, response) {
 
     if (error) response.json(error);
 
-    response.redirect('/nuevo_usuario');
+    response.redirect('login/nuevo_usuario');
 
   });
 

@@ -1,26 +1,26 @@
-extends ../layout
+extends ../layout_general
 
 block content
 	.body3
 		.main
-			form(method="POST", action="/login")
-				.tabla
-					table.agregar
-						tr
-							td
-								.tabla
-									table.agregar
-										tr
-											td#rows ¡Soy nuevo!
-										tr
-											td
-												| Al crear una cuenta podrás realizar tus compras, 
-												| consultar el estado de sus pedidos y consultar operaciones
-												| anteriores.
-									div(align="right") 
-										p
-											a(href="/login/nuevo_usuario") ¡Registrarme!
-							td
+			.tabla
+				table.agregar
+					tr
+						td
+							.tabla
+								table.agregar
+									tr
+										td#rows ¡Soy nuevo!
+									tr
+										td
+											| Al crear una cuenta podrás realizar tus compras, 
+											| consultar el estado de sus pedidos y consultar operaciones
+											| anteriores.
+								div(align="right") 
+									p
+										a(href="/login/nuevo_usuario") ¡Registrarme!
+						td
+							form(method="POST", action="/login/login")
 								.tabla
 									table.agregar
 										tr

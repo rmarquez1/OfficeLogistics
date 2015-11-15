@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+
+  .body3
+    .main
+
+      form#eliminar(method="POST", action="/admin_productos/eliminar_producto", enctype="multipart/form-data")
+        .tabla
+          table.agregar
+            tr
+              td#rows Eliminar Producto
+            tr
+              td Escriba el código del producto a eliminar:
+              td 
+                input(type="number" name="codigo" required)
+          div(align="center") 
+              button.button(type="submit") Enviar
+      
