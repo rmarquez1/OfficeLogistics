@@ -49,7 +49,6 @@ router.post('/login',function(req,res){
 });
 
 
-
 // =====================================
 // SIGNUP ==============================
 // =====================================
@@ -65,7 +64,6 @@ router.get('/nuevo_usuario', function(req, res) {
 // process the signup form
 router.post('/nuevo_usuario', function(req, res) {
 	var u = req.body;
-	console.log("Hola1");
 
   // podemos acceder a DB sin hacer
   // require porque es global
@@ -85,7 +83,6 @@ router.post('/nuevo_usuario', function(req, res) {
 		password : u.password,
 		esAdministrador : false
 	});
-	console.log("Hola2");
 
     nuevoUsuario.save(function(err, usuario) {
 
@@ -95,40 +92,6 @@ router.post('/nuevo_usuario', function(req, res) {
 
     });
 
-    /* nuevoUsuario.save(function(err, usuario) {
-    	console.log("Hola3");
-        if (err) {
-        	console.log("Hola4");
-            return res.render('usuarios/nuevo_usuario', { info: "Sorry. That username already exists. Try again."});
-        }
-        console.log("Hola");
-        
-        console.log("Hola5");
-    });
-     passport.authenticate('local')(req, res, function () {
-        	console.log("Hola adentro");
-            res.redirect('/login');
-        });*/
 });
 
-/*
-// =====================================
-// LOGOUT ==============================
-// =====================================
-router.get('/logout', function(req, res) {
-    req.logout();
-    res.redirect('/');
-});
-
-// route middleware to make sure a user is logged in
-function isLoggedIn(req, res, next) {
-
-    // if user is authenticated in the session, carry on 
-    if (req.isAuthenticated())
-        return next();
-
-    // if they aren't redirect them to the home page
-    res.redirect('/');
-}
-*/
 module.exports = router;
